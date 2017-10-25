@@ -5,6 +5,7 @@
 load 'job/job.groovy'
 masterJob = load 'job/masterJob.groovy'
 developJob = load 'job/developJob.groovy'
+aux = load 'job/aux.groovy'
 
 /**
  * Function called from Jenkinsfile to start the Job
@@ -27,6 +28,7 @@ def init() {
     def job = getJob(targetBranchName)
 
     echo job.testDad()
+    echo job.test()
 
 }
 
